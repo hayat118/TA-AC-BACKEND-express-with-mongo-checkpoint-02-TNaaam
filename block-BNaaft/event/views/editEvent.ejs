@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <form action="/events/<%= event._id %>" method="POST">
+      <input type="text" name="title" placeholder="title" value="<%= event.title %>">
+      <input type="text" name="summary" placeholder="summary" value="<%= event.summary %>">
+      <input type="text" name="host" placeholder="host" value="<%= event.host %>">
+      <input type="date" name="start_date" placeholder="start_date" value="<%= event.start_date %>">
+      <input type="date" name="end_date" placeholder="end_date" value="<%= event.end_date %>">
+      <input type="text" name="event_category" placeholder="event_category" value="<%= event.event_category %>">
+      <input type="text" name="locations" placeholder="locations" value="<%= event.locations %>">
+      <input type="submit" value="update">
+    </form>
+  </main>
+</body>
+</html>

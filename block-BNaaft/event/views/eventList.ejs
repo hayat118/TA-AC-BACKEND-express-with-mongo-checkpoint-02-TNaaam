@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="/events/new">
+        <button>Add Event</button>
+      </a>
+      <a href="/">
+        <button>event page</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <h2>List of events</h2>
+    <% events.forEach(event=>{ %>
+       <h3><%= event.title %></h3>
+        <a href="/events/<%= event._id %>">
+           <button>Show Details</button>
+         </a>
+  <%  })%>
+   
+  </main>
+</body>
+</html>
